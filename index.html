@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-pt-20">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -40,21 +40,29 @@
         font-family: "Hind Siliguri", sans-serif;
         font-weight: 500;
         font-style: normal;
-		
       }
     </style>
   </head>
-  <body class="poppins-regular">
+  <body class="poppins-regular relative">
     <!-- header section start-->
-    <header class="">
-      <nav class="flex items-center justify-between px-16 py-3 bg-gradient-to-l from-gray-100 to-gray-200 sticky z-[1000] top-0">
-        <h1 class="flex gap-1 items-center font-semibold text-xl">
-          English
-          <span><img class="w-10" src="assets/logo.png" alt="Web-logo" /></span><span class="hind-siliguri-regular text-xl">জানালা</span>
-        </h1>
+    <header class="bg-gradient-to-t to-blue-50 from-white">
+      <nav
+        id="navber"
+        class="flex items-center justify-between px-16 py-1 bg-transparent backdrop-blur-md border-b-1 fixed z-[1000] w-full top-0"
+      >
+        <a href="#">
+          <h1
+            class="flex gap-1 items-center font-semibold text-xl hover:bg-gray-200 p-2 rounded-lg"
+          >
+            English
+            <span
+              ><img class="w-10" src="assets/logo.png" alt="Web-logo" /></span
+            ><span class="hind-siliguri-regular text-xl">জানালা</span>
+          </h1>
+        </a>
         <div class="flex gap-5">
           <!-- btn 1 -->
-          <button class="flex gap-1 btn btn-outline btn-primary">
+          <button id="btn-faq" class="flex gap-1 btn btn-outline btn-primary">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -72,7 +80,7 @@
             FAQ
           </button>
           <!-- btn 2 -->
-          <button class="flex gap-1 btn btn-primary btn-outline">
+          <button id="btn-learn" class="flex gap-1 btn btn-primary btn-outline">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -90,7 +98,10 @@
             Learn
           </button>
           <!-- btn 3 -->
-          <button class="flex gap-1 btn btn-outline btn-primary">
+          <button
+            id="btn-logout"
+            class="flex gap-1 btn btn-outline btn-primary"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -109,32 +120,360 @@
           </button>
         </div>
       </nav>
-	  <!-- banner section start -->
-	 <section class="w-11/12 mx-auto flex items-center justify-between">
-		<!-- banner title -->
-		<div class="grid gap-6">
-			<h1 class="font-bold text-5xl"><span class="text-blue-500">English </span> is Easy!!!</h1>
-			<p class="text-gray-500 hind-siliguri-medium ">আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন <br> হন অথবা আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive <br> Lessons আপনাকে নিয়ে যাবে অন্য একটি Level এ</p>
-			<form>
-				<span class="flex flex-col gap-3 py-4">
-					<input type="text" placeholder="username" class="input input-primary" />
-				<input type="password" placeholder="password" class="input input-primary" />
-				</span>
-				<button class="btn btn-primary">Get Started</button>
-			</form>
-		</div>
-		<!-- banner image -->
-		 <img class="w-[40rem]" src="assets/hero-student.png" alt="Banner-Image">
-	 </section>
-	 <!-- banner section closed -->
+      <!-- banner section start -->
+      <section
+        id="bannerSection"
+        class="w-11/12 mx-auto flex items-center justify-between"
+      >
+        <!-- banner title -->
+        <div class="grid gap-6">
+          <h1 class="font-bold text-5xl">
+            <span class="text-blue-500">English </span> is Easy!!!
+          </h1>
+          <p class="text-gray-500 hind-siliguri-medium">
+            আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন <br />
+            হন অথবা আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive <br />
+            Lessons আপনাকে নিয়ে যাবে অন্য একটি Level এ
+          </p>
+          <form>
+            <span class="flex flex-col gap-3 py-4">
+              <input
+                id="user-name"
+                type="text"
+                placeholder="username"
+                value="Tanvir"
+                class="input input-primary"
+              />
+              <input
+                id="user-password"
+                type="password"
+                placeholder="password"
+                value="123456"
+                class="input input-primary"
+              />
+            </span>
+            <button id="login-btn" class="btn btn-primary">Get Started</button>
+          </form>
+          <!-- Modal Structure -->
+        </div>
+        <!-- banner image -->
+        <img
+          class="w-[40rem]"
+          src="assets/hero-student.png"
+          alt="Banner-Image"
+        />
+      </section>
+      <!-- banner section closed -->
     </header>
     <!-- header section closed -->
     <!-- main section start -->
     <main>
-	</main>
+      <!-- section 1 -->
+      <section id="learnSection" class="w-11/12 mx-auto grid gap-10 mt-28">
+        <h1 class="text-center font-bold text-4xl">
+          <span class="text-blue-600">Let's</span> Learn Vocabularies
+        </h1>
+        <!-- lesson btn  -->
+        <div class="flex justify-center gap-2">
+          <!-- btn-1 -->
+          <button
+            id="lesson-1"
+            class="flex gap-1 items-center btn btn-outline btn-primary"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25"
+              />
+            </svg>
+            Lesson -1
+          </button>
+          <!-- btn-2 -->
+          <button
+            id="lesson-2"
+            class="flex gap-1 items-center btn btn-outline btn-primary"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25"
+              />
+            </svg>
+            Lesson -2
+          </button>
+          <!-- btn-3 -->
+          <button
+            id="lesson-3"
+            class="flex gap-1 items-center btn btn-outline btn-primary"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25"
+              />
+            </svg>
+            Lesson -3
+          </button>
+          <!-- btn-4 -->
+          <button
+            id="lesson-4"
+            class="flex gap-1 items-center btn btn-outline btn-primary"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25"
+              />
+            </svg>
+            Lesson -4
+          </button>
+          <!-- btn-5 -->
+          <button
+            id="lesson-5"
+            class="flex gap-1 items-center btn btn-outline btn-primary"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25"
+              />
+            </svg>
+            Lesson -5
+          </button>
+          <!-- btn-6 -->
+          <button
+            id="lesson-6"
+            class="flex gap-1 items-center btn btn-outline btn-primary"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25"
+              />
+            </svg>
+            Lesson -6
+          </button>
+          <!-- btn-7 -->
+          <button
+            id="lesson-7"
+            class="flex gap-1 items-center btn btn-outline btn-primary"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25"
+              />
+            </svg>
+            Lesson -7
+          </button>
+        </div>
+        <!-- main container -->
+        <div class="bg-gray-200 rounded-2xl">
+          <!-- Child div -->
+          <div id="child-learn" class="text-center grid gap-3 p-10">
+            <p class="text-[0.9rem] text-gray-500 hind-siliguri-medium">
+              আপনি এখনো কোন Lesson Select করেন নি
+            </p>
+            <h1 class="text-3xl font-semibold hind-siliguri-medium">
+              একটি Lesson Select করুন।
+            </h1>
+          </div>
+          <!-- child div 1 -->
+          <div id="lesson0" class="grid gap-3 text-center p-10">
+            <img
+              class="mx-auto"
+              src="assets/alert-error.png"
+              alt="Alert-Image"
+            />
+            <p class="hind-siliguri-medium text-gray-500">
+              এই Lesson এ এখনো কোন Vocabulary যুক্ত করা হয়নি।
+            </p>
+            <h1 class="font-bold text-3xl hind-siliguri-medium">
+              নেক্সট Lesson এ যান
+            </h1>
+          </div>
+        </div>
+      </section>
+      <!-- section 2 -->
+      <section id="faqSection" class="w-11/12 mx-auto mt-28">
+        <h1 class="text-center text-4xl font-bold">
+          <span class="text-blue-600">Frequently</span> Asked Questions
+        </h1>
+        <!-- QNA -->
+        <div
+          class="collapse collapse-plus bg-blue-50 border border-gray-300 mt-16"
+        >
+          <input type="radio" name="my-accordion-3" checked="checked" />
+          <div class="collapse-title font-semibold">
+            1. the difference between var, let, and const
+          </div>
+          <div class="collapse-content text-sm">
+            In JavaScript, var, let, and const are used to declare variables,
+            but they behave differently in terms of scope, reassignability, and
+            hoisting.
+          </div>
+        </div>
+        <div
+          class="collapse collapse-plus bg-blue-50 border border-gray-300 mt-3"
+        >
+          <input type="radio" name="my-accordion-3" checked="checked" />
+          <div class="collapse-title font-semibold">
+            2. the difference between map(), forEach(), and filter()
+          </div>
+          <div class="collapse-content text-sm">
+            The map() method transforms each element and returns a new array,
+            while filter() returns a new array with elements that meet a
+            condition. The forEach() method executes a function on each element
+            but does not return a new array.
+          </div>
+        </div>
+        <div
+          class="collapse collapse-plus bg-blue-50 border border-gray-300 mt-3"
+        >
+          <input type="radio" name="my-accordion-3" checked="checked" />
+          <div class="collapse-title font-semibold">
+            3. explain arrow functions and how they are different from regular
+            functions
+          </div>
+          <div class="collapse-content text-sm">
+            Arrow functions in JavaScript provide a shorter syntax for writing
+            functions and behave differently from regular functions in terms of
+            how they handle the this keyword.
+          </div>
+        </div>
+        <div
+          class="collapse collapse-plus bg-blue-50 border border-gray-300 mt-3"
+        >
+          <input type="radio" name="my-accordion-3" checked="checked" />
+          <div class="collapse-title font-semibold">
+            4. how JavaScript Promises work
+          </div>
+          <div class="collapse-content text-sm">
+            In JavaScript, Promises are used to handle asynchronous operations.
+            They represent a value that may not be available yet, but will be
+            resolved in the future (either successfully or with an error).
+          </div>
+        </div>
+        <div
+          class="collapse collapse-plus bg-blue-50 border border-gray-300 mt-3"
+        >
+          <input type="radio" name="my-accordion-3" checked="checked" />
+          <div class="collapse-title font-semibold">
+            5. how closures work in JavaScript
+          </div>
+          <div class="collapse-content text-sm">
+            In JavaScript, closures are a fundamental concept where a function
+            retains access to its lexical scope, even when the function is
+            executed outside of that scope. This happens because functions in
+            JavaScript "remember" the environment in which they were created,
+            including variables that were in scope at the time.
+          </div>
+        </div>
+      </section>
+    </main>
     <!-- main section closed  -->
     <!-- footer section start -->
-    <footer></footer>
+    <footer class="bg-gradient-to-t to-gray-100 from-blue-100 mt-28 py-14">
+      <!-- main div  -->
+      <div class="w-11/12 mx-auto flex justify-between">
+        <!-- title div  -->
+        <div class="grid gap-4 w-1/2">
+          <h1 class="flex gap-1 items-center font-semibold text-xl">
+            English
+            <span
+              ><img class="w-10" src="assets/logo.png" alt="Web-logo" /></span
+            ><span class="hind-siliguri-regular text-xl">জানালা</span>
+          </h1>
+          <p>ইংরেজি শিখুন সহজে</p>
+          <p><small>Providing ED-Tech Applications since 2025</small></p>
+        </div>
+        <!-- social media link -->
+        <div class="w-1/2 flex justify-end items-end">
+          <div>
+            <p class="font-bold mb-3 text-gray-500">FOLLOW US</p>
+            <div class="flex gap-2">
+              <a href="https://www.facebook.com/" target="_blank"
+                ><img
+                  class="w-5 h-5"
+                  src="assets/fb-thumb.png"
+                  alt="Facebook-Icon"
+              /></a>
+              <a href="https://www.instagram.com/" target="_blank"
+                ><img
+                  class="w-5 h-5"
+                  src="assets/instagram-thumb.png"
+                  alt="Instagram-Icon"
+              /></a>
+              <a href="https://www.youtube.com/" target="_blank"
+                ><img
+                  class="w-5 h-5"
+                  src="assets/youtube-thumb.png"
+                  alt="Youtube-Icon"
+              /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
     <!-- footer section closed -->
+    <!-- script tag -->
+    <script src="script/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </body>
 </html>

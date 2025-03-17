@@ -104,9 +104,9 @@ function loadData(apiNumber) {
         <h3 class="hind-siliguri-bold">${
           item["meaning"] ? item["meaning"] : "অর্থ নেই"
         } / ${item["pronunciation"]}</h3>
-        <div class="flex justify-between ">
+        <div class="flex justify-between">
 
-        <button class="btn details-btn" onclick="my_modal_1.showModal()">
+        <button class="btn details-btn" onclick="showModal(${item.id})">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
           <path stroke-linecap="round" stroke-linejoin="round" d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z" />
           </svg>
@@ -123,6 +123,55 @@ function loadData(apiNumber) {
         parent.appendChild(div);
       });
     });
+}
+
+function showModal(id) {
+  document.getElementById("my_modal_1").showModal();
+
+  fetch(`https://openapi.programming-hero.com/api/word/${id}`)
+    .then((res) => res.json())
+    .then((details) => {
+      dictionaryDetails(details);
+    })
+    .catch((error) => {
+      console.error("Error fetching details:", error);
+    });
+}
+
+function dictionaryDetails(details) {
+  document.getElementById("my_modal_1").showModal();
+  const parentModal = document.getElementById("parent-modal");
+  const data = details.data;
+
+  const synonyms =
+    data.synonyms && data.synonyms.length > 0
+      ? data.synonyms
+          .map(
+            (synonym) =>
+              `<button class="btn btn-outline btn-sm mr-2">${synonym}</button>`
+          )
+          .join("")
+      : "কোনো সমার্থক শব্দ নেই";
+
+  parentModal.innerHTML = `
+    <div class="card bg-base-300 card-md shadow-sm border border-gray-500 shadow-gray-600">
+      <div class="card-body">
+        <h2 class="card-title text-2xl font-semibold text-center">${
+          data.word
+        } (<img src="../assets/microphone.png" alt="Icon" class="inline-block w-6 h-6 mr-2">: ${
+    data.pronunciation
+  })</h2>
+        <h3 class="text-xl font-medium">Meaning</h3>
+        <h4 class="font-medium text-xl hind-siliguri-regular">
+          '${data.meaning ? data.meaning : "অর্থ নেই"}'
+        </h4>
+        <h4 class="font-medium text-xl">Example</h4>
+        <p>${data.sentence ? data.sentence : "উদাহরণ নেই"}</p>
+        <h4 class="font-medium text-xl hind-siliguri-regular">সমার্থক শব্দ গুলো</h4>
+        <h4 class="font-medium text-xl hind-siliguri-regular">${synonyms}</h4>
+      </div>
+    </div>
+  `;
 }
 
 // lesson -1
@@ -156,7 +205,7 @@ document.getElementById("lesson-7").addEventListener("click", function () {
   loadData(7);
 });
 
-// learn btn
+// navber  learn btn
 
 document.getElementById("btn-learn").addEventListener("click", function () {
   document
@@ -164,7 +213,7 @@ document.getElementById("btn-learn").addEventListener("click", function () {
     .scrollIntoView({ behavior: "smooth" });
 });
 
-// faq btn
+// navber faq btn
 
 document.getElementById("btn-faq").addEventListener("click", function () {
   document.getElementById("faqSection").scrollIntoView({ behavior: "smooth" });
@@ -196,7 +245,4 @@ document.addEventListener("click", function (event) {
     pronounceWord(title);
   }
 });
-
-// Modal POP up
-
 

@@ -2,6 +2,7 @@ document.getElementById("navber").style.display = "none";
 document.getElementById("learnSection").style.display = "none";
 document.getElementById("faqSection").style.display = "none";
 
+// login btn
 document
   .getElementById("login-btn")
   .addEventListener("click", function (event) {

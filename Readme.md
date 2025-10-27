@@ -56,12 +56,14 @@ Built with only **HTML**, **CSS**, and **Vanilla JavaScript** — no heavy frame
 </p>
 
 ## Login info
- - **userName: if any**
+ - **userName:  any**
  - **password: 123456**
 
 *(You can replace the above link with your real project screenshot.)*
 
 ---
 
-## 🧩 Folder Structure
+## 🧩 Author
+**Tanvir Hasan**
+**tanvirx015@gmail.com**
 

@@ -5,8 +5,8 @@
 🟢 **Live Demo:** [https://assignment-6-tanvir-hasan-code.netlify.app/](https://assignment-6-tanvir-hasan-code.netlify.app/)
 
 ## Login info
- - ** userName: if any**
- - **password: 123456
+ - **userName: any**
+ - **password: 123456**
 
 ---
 
@@ -50,11 +50,14 @@ Built with only **HTML**, **CSS**, and **Vanilla JavaScript** — no heavy frame
 
 ## 📸 Preview
 
-![English Janala Screenshot](https://i.ibb.co.com/C3kbQj3y/image.png)
+![English Janala Screenshot]
+<p align="center">
+  <img src="https://i.ibb.co.com/C3kbQj3y/image.png" alt="English-Janala Banner" width="100%" />
+</p>
 
 ## Login info
- - ** userName: if any**
- - **password: 123456
+ - **userName: if any**
+ - **password: 123456**
 
 *(You can replace the above link with your real project screenshot.)*
 
